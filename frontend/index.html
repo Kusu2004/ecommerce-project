@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecommerce Personalization Engine</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Ecommerce Personalization Rules Engine</h1>
+
+        <p class="subtitle">
+            Simulate shopper events and see real-time personalization decisions
+        </p>
+
+        <div class="main-content">
+
+            <!-- Event Simulator -->
+            <div class="card">
+
+                <h2>Event Simulator</h2>
+
+                <label>User ID</label>
+
+                <input 
+                    type="text" 
+                    id="userId" 
+                    value="user_001"
+                >
+
+                <h3>Add Shopper Events</h3>
+
+                <div class="buttons">
+
+                    <button onclick="addEvent('product_view')">
+                        Product View
+                    </button>
+
+                    <button onclick="addEvent('compare')">
+                        Compare
+                    </button>
+
+                    <button onclick="addEvent('coupon_search')">
+                        Coupon Search
+                    </button>
+
+                    <button onclick="addEvent('discount_page_view')">
+                        Discount Page
+                    </button>
+
+                    <button onclick="addEvent('cart_add')">
+                        Add to Cart
+                    </button>
+
+                    <button onclick="addEvent('purchase')">
+                        Purchase
+                    </button>
+
+                </div>
+
+                <h3>Current Events</h3>
+
+                <div id="eventList">
+                    No events added yet
+                </div>
+
+                <button class="classify-btn" onclick="classifyUser()">
+                    Classify Shopper
+                </button>
+
+                <button class="clear-btn" onclick="clearEvents()">
+                    Clear Events
+                </button>
+
+            </div>
+
+
+            <!-- Result Dashboard -->
+            <div class="card result-card">
+
+                <h2>Personalization Result</h2>
+
+                <div id="result">
+
+                    <p class="empty">
+                        Add events and click "Classify Shopper"
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
